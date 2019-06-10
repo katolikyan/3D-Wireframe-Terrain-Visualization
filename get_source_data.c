@@ -6,7 +6,7 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 18:47:11 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/10 15:17:17 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/10 16:05:51 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,12 +59,12 @@ void			get_liniar_coefficients(t_glob *prms)
 {
 	prms->clr_h_max = ft_2d_int_array_max(MAP_Z, prms->map_y, prms->map_x);
 	prms->clr_h_min = ft_2d_int_array_min(MAP_Z, prms->map_y, prms->map_x);
-	prms->clr_min.r = (BASE_C >> 16); 			// 206
+	prms->clr_min.r = (BASE_C >> 16);
 	prms->clr_min.g = ((BASE_C & 0xFF00) >> 8);
 	prms->clr_min.b = (BASE_C & 0xFF);
-	prms->clr_max.r = (TOP_C >> 16);  			// 255
-	prms->clr_max.g = ((TOP_C & 0xFF00) >> 8);	// 0
-	prms->clr_max.b = (TOP_C & 0xFF);			// 67
+	prms->clr_max.r = (TOP_C >> 16); 
+	prms->clr_max.g = ((TOP_C & 0xFF00) >> 8);
+	prms->clr_max.b = (TOP_C & 0xFF);
 	prms->coeff_k.r = ((float)prms->clr_h_min - (float)prms->clr_h_max) /
 	   				((float)prms->clr_min.r - (float)prms->clr_max.r);
 	prms->coeff_k.g = ((float)prms->clr_h_min - (float)prms->clr_h_max) /
