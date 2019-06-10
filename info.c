@@ -6,7 +6,7 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 16:22:53 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/10 15:53:42 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/10 16:12:30 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -160,7 +160,7 @@ void			create_help(t_glob *prms)
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 4,
 	RES_Y / 3 + 34 * 4, T_C, "[  ]    - change background color.");
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 4,
-	RES_Y / 3 + 34 * 5, T_C, "m       - motion blure activation.");
+	RES_Y / 3 + 34 * 5, T_C, "m       - motion blur activation.");
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 4,
 	RES_Y / 3 + 34 * 8, T_C, "MOUSE KEYS:");
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 4,
