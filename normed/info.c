@@ -6,7 +6,7 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 16:22:53 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/11 01:06:58 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/14 21:08:21 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void			create_info_2_scale_zoom(t_glob *prms)
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 32 + 196,
 			RES_Y / 16 + 0, T_C, ft_itoa(SC_MULT));
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 32,
-			RES_Y / 16 + 34, T_C, "Altitude scale:");
+			RES_Y / 16 + 34, T_C, "Altitude scale %:");
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 32 + 196,
 			RES_Y / 16 + 34, T_C,
 			ft_itoa(ft_2d_double_array_max(MAP_Z_ADJ, prms->map_y, prms->map_x)
