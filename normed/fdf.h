@@ -6,7 +6,7 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 18:30:10 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/11 01:11:58 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/16 01:06:56 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -266,7 +266,8 @@ int					key_press_5_transformations(int key, t_glob *prms);
 int					key_press_6_help_info(int key, t_glob *prms);
 int					key_press_7_depth_focal_motion_blur(int key, t_glob *prms);
 int					key_press_8_reset_close(int key, t_glob *prms);
-void				create_info_1_alpha_distortions(t_glob *prms);
+void				create_info_0_distortions(t_glob *prms);
+void				create_info_1_alpha(t_glob *prms);
 void				create_info_2_scale_zoom(t_glob *prms);
 void				create_info_3_focal_orto(t_glob *prms);
 void				create_info_4_altitude_help(t_glob *prms);

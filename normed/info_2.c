@@ -6,7 +6,7 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 16:22:53 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/11 01:07:32 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/16 01:08:13 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,4 +103,17 @@ void			create_help_3(t_glob *prms)
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 2 - 292,
 	RES_Y / 3 + 34 * 17, T_C, "Special thanks to Stepan Nikitin: \
 	github.com/nikitinste");
+}
+
+void			create_info_0_distortions(t_glob *prms)
+{
+	if (prms->trigger.distortion_1 == 1)
+		mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X - 96,
+				RES_Y / 16 + 0, T_C, "dist.1");
+	if (prms->trigger.distortion_2 == 1)
+		mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X - 96,
+				RES_Y / 16 + 32, T_C, "dist.2");
+	if (prms->trigger.distortion_3 == 1)
+		mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X - 96,
+				RES_Y / 16 + 64, T_C, "dist.3");
 }

@@ -6,7 +6,7 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 16:22:53 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/15 17:54:51 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/15 22:21:26 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,33 @@ void			create_info(t_glob *prms)
 
 void			create_info_4_altitude_help(t_glob *prms)
 {
+	char		*h_max;
+	char		*h_min;
+
+	h_max = ft_itoa(prms->clr_h_max);
+	h_min = ft_itoa(prms->clr_h_min);
+
 // 	altitude;
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
 		RES_X / 32, RES_Y / 4 + 34 * -1, T_C, "Altitude:");
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
-		RES_X / 32 + 30, RES_Y / 4 - 5, T_C, ft_itoa(prms->clr_h_max));
+		RES_X / 32 + 30, RES_Y / 4 - 5, T_C, h_max);
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
-		RES_X / 32 + 30, RES_Y / 4 + 134, T_C, ft_itoa(prms->clr_h_min));
+		RES_X / 32 + 30, RES_Y / 4 + 134, T_C, h_min);
 	altitude_info(prms);
-
 //	help;
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
 		RES_X / 32, RES_Y - RES_Y / 16, T_C, "Press 'H' for help");
+
+	free(h_max);
+	free(h_min);
 }
 
 void			create_info_3_focal_orto(t_glob *prms)
 {
+	char		*focal;
+
+	focal = ft_itoa(FOCAL / 20);
 	if (prms->trigger.perspective == 1)
 	{
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
@@ -55,32 +66,48 @@ void			create_info_3_focal_orto(t_glob *prms)
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
 		RES_X / 32, RES_Y / 16 + 34 * 3, T_C, "Focal length mm:  ~");
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
-		RES_X / 32 + 196, RES_Y / 16 + 34 * 3, T_C, ft_itoa(FOCAL / 20));
+		RES_X / 32 + 196, RES_Y / 16 + 34 * 3, T_C, focal);
 	}
 	else
 	{
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
 		RES_X / 32, RES_Y / 16 + 34 * 2, T_C, "Projection: ortho" );
 	}
+	free(focal);
 }
 
 void			create_info_2_scale_zoom(t_glob *prms)
 {
+	char		*sc_mult;
+	char		*alt_scale;
+
+	sc_mult = ft_itoa(SC_MULT);
+	alt_scale = ft_itoa(ft_2d_double_array_max(MAP_Z_ADJ, prms->map_y, prms->map_x)
+					 * 100.0 / (double)prms->clr_h_max);
+
+//	scale and altitude info;
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 32,
 			RES_Y / 16 + 0, T_C, "Zoom multiplyer:");
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 32 + 196,
-			RES_Y / 16 + 0, T_C, ft_itoa(SC_MULT));
+			RES_Y / 16 + 0, T_C, sc_mult);
 
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 32,
 			RES_Y / 16 + 34, T_C, "Altitude scale %:");
 	mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X / 32 + 196,
-			RES_Y / 16 + 34, T_C, 
-			ft_itoa(ft_2d_double_array_max(MAP_Z_ADJ, prms->map_y, prms->map_x)
-					 * 100.0 / (double)prms->clr_h_max));
+			RES_Y / 16 + 34, T_C, alt_scale);
+
+	free(sc_mult);
+	free(alt_scale);
 }
 
 void			create_info_1_alpha_distortions(t_glob *prms)
 {
+	char		*alpha_bg;
+	char		*alpha_pix;
+
+	alpha_bg = ft_itoa(BACK_A);
+	alpha_pix = ft_itoa(PIX_A);
+
 //	distoritions;
 	if (prms->trigger.distortion_1 == 1)
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X - 96, 
@@ -98,15 +125,18 @@ void			create_info_1_alpha_distortions(t_glob *prms)
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X - 96, 
 			RES_Y / 16 + 128, T_C, "B");
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X - 64, 
-			RES_Y / 16 + 128, T_C, ft_itoa(BACK_A));
+			RES_Y / 16 + 128, T_C, alpha_bg);
 	}
 	if (PIX_A != 0)
 	{
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X - 96, 
 			RES_Y / 16 + 160, T_C, "P");
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, RES_X - 64, 
-			RES_Y / 16 + 160, T_C, ft_itoa(PIX_A));
+			RES_Y / 16 + 160, T_C, alpha_pix);
 	}
+
+	free(alpha_bg);
+	free(alpha_pix);
 }
 
 void			altitude_info(t_glob *prms)

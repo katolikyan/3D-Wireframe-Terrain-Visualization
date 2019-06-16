@@ -6,12 +6,14 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 18:47:11 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/10 16:05:51 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/16 00:29:22 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 #include <fcntl.h>
+#include <limits.h>
+#include <float.h>
 
 /*
 **	This block collects and stores data from the provided file.
@@ -109,6 +111,7 @@ void			get_map_xy(t_glob *prms)
 		if (line_start)
 			free(line_start);
 	}
+	free(line);
 	return ;
 }
 
@@ -164,6 +167,7 @@ void			get_map_z(t_glob *prms)
 		free(split);
 		free(line);
 	}
+	free(line);
 	// allocate ADJ array;
 	i = -1;
 	h = -1;

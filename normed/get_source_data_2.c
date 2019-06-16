@@ -6,7 +6,7 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 18:47:11 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/10 19:55:30 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/16 00:40:58 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void			get_map_z(t_glob *prms)
 		free(split);
 		free(line);
 	}
+	free(line);
 	get_map_z_extra(prms);
 }
 
