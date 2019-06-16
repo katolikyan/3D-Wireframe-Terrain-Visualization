@@ -6,7 +6,7 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 18:30:10 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/10 00:59:36 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/15 17:54:36 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@
 */
 
 // resolution: 		minimum recomended resolution is 1920 x 1080;
-# define RES_X		2560
-# define RES_Y		1440
+# define RES_X		1920	
+# define RES_Y		1080
 
 # define DEF_SC		30			// basic scale;
 # define DEF_AX		-1.0		// basic angle x, y, z;
@@ -40,11 +40,11 @@
 # define DEF_PIX_A	0			// basic alpha for pixels;
 
 # define DEF_BACK_C	0x2a2a2a 	// background color;
-# define DEF_BS_C	0xe8e8e8 	// base color;
-# define DEF_BS_C_2	0x0f0f0f	// base color inverse (light background)
-# define DEF_TOP_C	0xff0043	// hights color;
+# define DEF_BS_C	0xe8e8e8 	// altitude min color;
+# define DEF_BS_C_2	0x0f0f0f	// altitude min inverse color (light background)
+# define DEF_TOP_C	0xff0043	// altitude max color;
 # define DEF_TXT_C	0xe0e0e0	// text color;
-# define DEF_TXT_2	0x191919	// text color inverse (light background)
+# define DEF_TXT_2	0x191919	// text inverse color  (light background)
 
 /*
 ** Shortcats ______________________________________________________
@@ -53,6 +53,7 @@
 # define MAP_Z		((*prms).map_z)
 # define MAP_Z_ADJ	((*prms).map_z_adj) 
 # define MAP_Z_NEW	((*prms).map_z_prjct) 
+//# define MAP_Z_PIX	((*prms).map_z_pix) 
 
 # define X			(prms->crt.x)
 # define Y			(prms->crt.y)
@@ -160,6 +161,7 @@ typedef struct		s_global
 	int				**map_z;		// Z coordinates table;
 	double			**map_z_adj;	// Z coordinates adjustable to scale Z;
 	double			**map_z_prjct;	// converted Z in window cords, (depth);
+//	double			**map_z_pix;
 	int				map_x;			// map demensions;
 	int				map_y;	
 	int				scale;

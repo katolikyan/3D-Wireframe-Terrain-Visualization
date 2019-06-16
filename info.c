@@ -6,7 +6,7 @@
 /*   By: tkatolik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 16:22:53 by tkatolik          #+#    #+#             */
-/*   Updated: 2019/06/13 15:59:24 by tkatolik         ###   ########.fr       */
+/*   Updated: 2019/06/15 17:54:51 by tkatolik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void			create_info_3_focal_orto(t_glob *prms)
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
 		RES_X / 32, RES_Y / 16 + 34 * 2, T_C, "Projection: persp");
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
-		RES_X / 32, RES_Y / 16 + 34 * 3, T_C, "Focal lenght mm:  ~");
+		RES_X / 32, RES_Y / 16 + 34 * 3, T_C, "Focal length mm:  ~");
 		mlx_string_put(prms->mlx_ptr, prms->win_ptr, 
 		RES_X / 32 + 196, RES_Y / 16 + 34 * 3, T_C, ft_itoa(FOCAL / 20));
 	}
