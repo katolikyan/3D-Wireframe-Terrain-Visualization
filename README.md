@@ -1,8 +1,8 @@
-## WIREFRAME MAP MAKER
+## WIREFRAME MAP GENERATOR
 Program creates 3d wireframe map representation based on specific 2D map input.
 
 Check out an amazing art motion graphics project made with this program.
-<link>
+https://www.behance.net/gallery/81671933/The-Art-of-Code
 
 ## Usage
 
@@ -45,10 +45,10 @@ $>
 * *Depth/fog effect.*
 * *Motion blur.*
 * *Camera focal length change (perspective).*
-  
+
 For all options press `h` to open help page.
 
-Resolution and colors (background, gradient, text) can be simply changed in `fdf.h` file. 
+Resolution and colors (background, gradient, text) can be changed in `fdf.h` file.
 
 ```C
 // resolution:
@@ -63,23 +63,27 @@ Resolution and colors (background, gradient, text) can be simply changed in `fdf
 # define DEF_TXT_2  0x191919    // text inverse color;
 ```
 
-#### image examples
+#### image examples:
 ###### *The Venus*
 ![Venus](https://github.com/katolikyan/Wireframe-map-generator/blob/master/media/Venus.png?raw=true)
 
 ###### *The Moon*
 ![Moon](https://github.com/katolikyan/Wireframe-map-generator/blob/master/media/Moon.png?raw=true)
 
-###### *Yerevan*
-![Moon](https://github.com/katolikyan/Wireframe-map-generator/blob/master/media/Yerevan.png?raw=true)
+###### *Gulf of California*
+![Gulf_of_CA](https://github.com/katolikyan/Wireframe-map-generator/blob/master/media/Gulf_of_california.gif?raw=true)
 
 ***
 
-#### Plans to improve the project someday:
+#### Plans and ideas to improve the project someday(probably never):
 
-* *Create color map.*
+* *Optimize calculations.*
+* *Create multicolor map.*
 * *Run program on GPU.*
 * *Export image.*
 * *Export 16 bit image as a displacement map for 3D software.*
 * *Integrate program as a script for 3Ds max.*
 
+***
+
+#### Special thanks to [Stepan Nikitin](https://github.com/nikitinste)
