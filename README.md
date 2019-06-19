@@ -77,6 +77,7 @@ Resolution and colors (background, gradient, text) can be changed in `fdf.h` fil
 
 #### Plans and ideas to improve the project someday(probably never):
 
+* *Refactor the code.*
 * *Optimize calculations.*
 * *Create multicolor map.*
 * *Run program on GPU.*
