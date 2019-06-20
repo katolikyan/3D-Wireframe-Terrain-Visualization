@@ -30,7 +30,7 @@ CC		:=	gcc
 #DEBUG	:=	-g
 #DEBUG	+=	-fsanitize=address
 
-FLAGS	:=	-Wall -Wextra -Werror
+FLAGS	:=	-Wall -Wextra -Werror -O3
 FLAGS	+=	-c -I.
 MLIBX	:=	-L minilibx -lmlx -framework OpenGL -framework AppKit
 
