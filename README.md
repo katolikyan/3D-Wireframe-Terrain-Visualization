@@ -11,7 +11,7 @@ https://www.behance.net/gallery/81671933/The-Art-of-Code
 $> Make
 $> ./fdf [source_file]
 ```
-![](https://github.com/katolikyan/Wireframe-map-generator/blob/master/media/make_demo.gif?raw=true)
+![](./media/make_demo.gif)
 ***
 ### Map example
 
@@ -36,7 +36,7 @@ $>
 ***
 ### Basic demo
 
-![](https://github.com/katolikyan/Wireframe-map-generator/blob/master/media/basic_demo.gif?raw=true)
+![](./media/basic_demo.gif)
 
 **Some functionality**:
 * *Orthographic and perspective projections.*
@@ -65,13 +65,13 @@ Resolution and colors (background, gradient, text) can be changed in `fdf.h` fil
 
 #### image examples:
 ###### *The Venus*
-![Venus](https://github.com/katolikyan/Wireframe-map-generator/blob/master/media/Venus.png?raw=true)
+![Venus](./media/Venus.png)
 
 ###### *The Moon*
-![Moon](https://github.com/katolikyan/Wireframe-map-generator/blob/master/media/Moon.png?raw=true)
+![Moon](./media/Moon.png)
 
 ###### *Gulf of California*
-![Gulf_of_CA](https://github.com/katolikyan/Wireframe-map-generator/blob/master/media/Gulf_of_california.gif?raw=true)
+![Gulf_of_CA](./media/Gulf_of_california.gif)
 
 ***
 
